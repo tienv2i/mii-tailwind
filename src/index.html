@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header class="shadow px-4">
+        <nav class="relative md:flex max-w-6xl mx-auto py-4" x-data="{ navOpen: false }">
+            <div class="flex">
+                <div class="inline-block align-middle items-center text-4xl semibold">Hello world</div>
+                <div class="burger ml-auto md:hidden"> 
+                    <button href="#" class="relative w-10 h-10 bg-white border"  @click="navOpen = !navOpen">
+                        <div class="block absolute w-5 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <span class="block absolute h-0.5 w-5 bg-gray-500 transition duration-500 ease-in-out" :class="{ '-translate-y-1.5': !navOpen, 'rotate-45': navOpen }"></span>
+                            <span class="block absolute h-0.5 w-5 bg-gray-500 transition duration-500 ease-in-out" :class="{ 'opacity-0': navOpen }"></span>
+                            <span class="block absolute h-0.5 w-5 bg-gray-500 transition duration-500 ease-in-out" :class="{  'translate-y-1.5': !navOpen, '-rotate-45': navOpen }"></span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <ul class="block absolute md:relative md:flex md:items-center ml-auto bg-white md:bg-transparent w-auto md:w-full" 
+                :class="{' m-fadeOut': !navOpen, 'm-fadIn': navOpen }">
+
+                <li><a href="#" class="inline-block text-gray-600 py-2 px-4 rounded hover:bg-gray-100">Home</a></li>
+                <li><a href="#" class="inline-block text-gray-600 p-4">Blog</a></li>
+                <li><a href="#" class="inline-block text-gray-600 p-4">About</a></li>
+                <li><a href="#" class="inline-block text-gray-600 p-4">Contact</a></li>
+                <li class="relative" x-data="{open: false}">
+                    <a href="#" class="inline-block text-gray-600 p-4" @click="open = !open" @click.away="open = false">User</a>
+                    <ul class="absolute bg-white p-4 border top-full left-2 md:left-0 mt-0 md:mt-2" x-show="open" x-transition>
+                        <li><a href="#" class="inline-block text-gray-600 p-4">Login</a></li>
+                        <li><a href="#" class="inline-block text-gray-600 p-4">Register</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

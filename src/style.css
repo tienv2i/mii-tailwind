@@ -1,0 +1,33 @@
+@tailwind base;
+@layer base {
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    h3 {
+      @apply text-lg;
+    }
+    a {
+      @apply text-blue-600;
+    }
+}
+@tailwind components;
+@tailwind utilities;
+
+.m-fadeOut {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 500ms, opacity 500ms;
+}
+
+.m-fadeIn {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 500ms;
+}
+
+[x-cloak] { 
+    display: none !important; 
+}

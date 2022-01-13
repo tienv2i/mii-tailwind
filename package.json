@@ -1,0 +1,40 @@
+{
+  "name": "mii-tailwind",
+  "version": "1.0.0",
+  "description": "Learning TailwindCSS",
+  "main": "index.js",
+  "repository": "git@github.com:tienv2i/mii-tailwind.git",
+  "author": "Huynh AT <tienv2i@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack --watch",
+    "serve": "cross-env NODE_ENV=development webpack serve",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.6",
+    "postcss": "^8.4.5",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.47.0",
+    "sass-loader": "^12.4.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "alpinejs": "^3.7.1",
+    "autoprefixer": "^10.4.2",
+    "cross-env": "^7.0.3",
+    "tailwindcss": "^3.0.13",
+    "tw-elements": "^1.0.0-alpha6"
+  }
+}
